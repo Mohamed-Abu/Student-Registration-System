@@ -1,0 +1,76 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/static/img/bg5.webp");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+form{
+    font-size: large;
+    color:black;
+}
+.std{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    padding:0 60px 20px 60px;
+    border-radius: 20px;
+    border: 1px solid;
+}
+#nmin, #email1, #birth, #phnum, #test {
+margin: 10px 0 20px 0;
+height: 30px;
+width: 350px;
+padding: 0 10px;
+font-size: 15px;
+border-radius: 5px;
+border: 2px solid;
+background: transparent;
+}
+#nmin, #email1, #birth, #phnum, #test:hover{
+    cursor: pointer;
+}
+.clss{
+    margin: 20px 0 20px 0;
+}
+.num{
+    margin: -15px 0 0 0;
+}
+.select{
+    margin: 10px 0 20px 0;
+    height:30px;
+    width: 315px;
+    padding: 0 10px 0 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid;
+    text-align: center;
+    background: transparent;
+}
+.gen{
+    background: transparent;
+}
+button{
+    height:40px;
+    width: 140px;
+    margin-left: 230px;
+    background-color: rgb(22, 170, 17);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.gen,.select,button:hover{
+    cursor: pointer;
+}
+button:active {
+border: 4px solid rgb(53, 188, 96); /* Add the border style you want when the button is pressed */
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

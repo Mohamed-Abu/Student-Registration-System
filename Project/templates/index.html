@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+
+    <div class="std">
+        <h1 style="text-align: center;color: black;">Student Registration</h1>
+
+        <form class="px-md-2" action="/App/" method="POST" autocomplete="off">
+            {% csrf_token %}
+            <div class="naem">
+                <div class="name">
+                    <label class="labeln"><b>Name :</b></label><br>
+                    <input type="text" name="name" id="nmin" required />
+                </div>
+
+                <div class="email">
+                    <label class="form-label2"><b>Email :</b></label><br>
+                    <input type="email" name="email" id="email1" class="form-control" required />
+                </div>
+            </div>
+
+            <div class="dob">
+                <label class="form-label"><b>Date of Birth :</b></label><br>
+                <input type="date" name="dob" id="birth" required />
+            </div>
+
+            <div class="gender">
+                <label class="gend"><b>Gender :</b></label>&nbsp;
+                <input type="radio" name="gender" id="female" class="gen" value="Male">
+                <label for="male">Male</label>&nbsp;&nbsp;
+                <input type="radio" name="gender" id="male" class="gen" value="Female">
+                <label for="female">Female</label>&nbsp;&nbsp;
+                <input type="radio" name="gender" id="other" class="gen" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <div class="clss">
+                <label class="cls"><b>Class :</b></label>
+                <select name="sclass" class="select" required>
+                    <option value="1" disabled>Class</option>
+                    <option value="Class 1">Class 1</option>
+                    <option value="Class 2">Class 2</option>
+                    <option value="Class 3">Class 3</option>
+                    <option value="Class 4">Class 4</option>
+                    <option value="Class 5">Class 5</option>
+                    <option value="Class 6">Class 6</option>
+                    <option value="Class 7">Class 7</option>
+                    <option value="Class 8">Class 8</option>
+                    <option value="Class 9">Class 9</option>
+                    <option value="Class 10">Class 10</option>
+                    <option value="Class 11">Class 11</option>
+                    <option value="Class 12">Class 12</option>
+                </select>
+            </div>
+
+            <div class="num">
+                <label class="phn"><b>Phone Number :</b></label><br>
+                <input type="text" name=phn id="phnum" required />
+            </div>
+
+            <div class="test">
+                <label class="scr"><b>Admission Test Score :</b></label><br>
+                <input type="number" name=admin id="test" required />
+            </div>
+
+            <button type="submit" class="butt">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

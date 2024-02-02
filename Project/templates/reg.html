@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="{% static 'css/reg.css' %}">
+</head>
+
+<body>
+    <div class="std">
+        <h1 style="text-align: center;color: black;">Registration Code</h1>
+
+        <form class="px-md-2" action="/App/otp/" method="POST" autocomplete="off">
+            {% csrf_token %}
+            <span>Please check your email <b>{{ email }}</b> for registration 
+                code and enter the code in the below column.</span>
+            <div class="co"><br>
+                <label class="code"><b>Enter OTP </b></label><br>
+                <input type="text" name="code" id="cod" required />
+                <input type="hidden" name="email" value="{{ email }}">
+            </div>
+            <button type="submit" class="butt">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
